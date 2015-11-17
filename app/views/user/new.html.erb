@@ -1,0 +1,13 @@
+<h1>User#new</h1>
+<p>Find me in app/views/user/new.html.erb</p>
+
+<h1>Signup page</h1>
+
+<%= bootstrap_form_for :user do |f| %>
+	<%= f.text_field :email, placeholder: "Email" %>
+	<%= f.password_field :password, placeholder: "Password" %>
+	<%= f.text_field :name, placeholder: "Your name" %>
+
+	<%= f.primary "Submit" %>
+
+<% end %>
