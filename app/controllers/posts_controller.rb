@@ -11,7 +11,7 @@ class PostsController < ApplicationController
 
   def create
     current_user.post.create post_params
-  	redirect_to posts_path
+  	redirect_to root_path
   end
 
   private
