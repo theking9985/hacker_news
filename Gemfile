@@ -23,7 +23,8 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem "url_validator"
+# gem "url_validator"
+gem "validate_url"
 gem "email_validator"
 
 # Use ActiveModel has_secure_password
