@@ -1,14 +1,28 @@
 class PostsController < ApplicationController
+  before_action :is_authenticated?, except: [:index]
+
   def index
-  	@posts = Post.find(params[:user_id]).all
+  	@posts = Post.all
   end
 
   def new
-  	@user = User.new
+  	@post = Post.new
   end
 
   def create
-  	User.create user_params
-  	redirect_to 
+    current_user.post.create post_params
+  	redirect_to posts_path
+  end
+
+  private
+
+  def post_params
+  	params.require(:post).permit(:title, :link, :user_id)
   end
 end
+
+
+
+
+
+

@@ -1,0 +1,10 @@
+<h1>Add post here</h1>
+
+<%= bootstrap_form_for @post do |p| %>
+	<%= p.text_field :title, placeholder: "Post title" %>
+	<%= p.text_field :link, placeholder: "URL link" %>
+	<%= p.hidden_field :user_id, hide_label: true %>
+
+	<%= p.primary %>
+
+<% end %>
